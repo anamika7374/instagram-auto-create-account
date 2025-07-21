@@ -29,10 +29,10 @@ jobs:
         sudo apt-get install -y xvfb
         pip install pyvirtualdisplay
 
-    - name: Fix urllib3 and six compatibility
+    - name: Fix urllib3 and six compatibility (reordered installation)
       run: |
-        pip install --force-reinstall urllib3==1.26.18
         pip install --force-reinstall six
+        pip install --force-reinstall urllib3==1.26.18
         pip install --force-reinstall requests
 
     - name: Install remaining dependencies
